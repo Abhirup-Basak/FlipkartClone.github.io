@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/logosite.jpeg">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>flipkart</title>
+</head>
+
+<body>
+    <!-- -----------Navbar----------------- -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logo.png"></a>
+        </div>
+        <div class="searchbox">
+            <div class="search">
+                <input type="search" id="search" placeholder="Search for products, brands and more">
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </div>
+        </div>
+        <div class="login">
+            <button class="logindesign">Login</button>
+            <div class="login-dropdown-content">
+                <div class="anchertags">
+                    <p>New Cumtomer ?</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <p>My Profile</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <p>Flipkart Plus Zone</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                    <p>Order</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <p>wishlist</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fas fa-award"></i>
+                    <p>Rewards</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fas fa-gift-card"></i>
+                    <p>Gift Cards</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="more">
+            <div class="moretext">
+                <p>More</p>
+            </div>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <div class="more-dropdown-content">
+                <div class="anchertags">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    <p>Notification Preference</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    <p>Sell on Flipkart</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <p>24x7 Customer Care</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <p>Advertise</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <p>Download App</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+
+            <div class="morecart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <p><span class="cartnumber"></span><a href="cart.html">Cart</a></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------Login Modals----------------- -->
+
+    <div class="loginmodalcontent" id="loginmodalcontent">
+        <div class="closebutton" id="closebtn">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+        </div>
+
+        <div class="modalcontent">
+            <div class="subdivisionlogin">
+                <div class="loginmodalidcontent" id="loginmodalid">
+
+                    <div class="loginleftbar">
+                        <div class="logincontent" id="logincreate">
+                            <h1>Login</h1>
+                            <p>Get access to your Orders, Wishlist and Recommendations</p>
+                        </div>
+                        <img src="imgs/loginside.JPG">
+                    </div>
+                    <div class="loginrightbar">
+                        <form id="loginform">
+                            <input type="text" placeholder="Enter Email/Mobile Number" id="email">
+                            <span id="errormailmsg" class="activeerror"></span>
+                            <input type="password" placeholder="Enter Password" id="psw">
+                            <span id="errorpswmsg" class="activeerror"></span>
+                            <div class="loginpolicy">
+                                <p>By continuing, you agree to Flipkart's <span>terms of Use</span> and <span>privacy
+                                        Policy</span> .
+                                </p>
+                            </div>
+                            <div class="loginbutton rightbarbuttons" id="loginbtn">
+                                <button>Login</button>
+                            </div>
+                        </form>
+                        <div class="rightbarbuttons">
+                            <div class="loginorbutton">
+                                <button>OR</button>
+                            </div>
+
+                            <div class="loginrequestOTPbutton">
+                                <button>Request OTP</button>
+                            </div>
+                        </div>
+
+                        <div class="creatingnew" id="createaccount">
+                            <div class="creatingnewaccount">
+                                <p>New to Flipkart? Create an account</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subdivisioncreate">
+                <div class="createmodalcontent" id="createmodalid">
+
+                    <div class="logincreateleftbar">
+                        <div class="logincontent" id="logincreate">
+                            <h1>Looks like you're new here!</h1>
+                            <p>Sign up with your mobile number to get started</p>
+                        </div>
+                        <img src="imgs/loginside.JPG" class="right-bar-img">
+                    </div>
+                    <div class="loginrightbar">
+                        <form id="createform">
+                            <input type="phone number" placeholder="Enter Mobile Number" id="number">
+                            <span id="errornumbermsg" class="activeerror"></span>
+                            <div class="loginpolicy">
+                                <p>By continuing, you agree to Flipkart's <span>terms of Use</span> and <span>privacy
+                                        Policy</span> .
+                                </p>
+                            </div>
+                            <div class="loginbutton rightbarbuttons" id="loginbtn">
+                                <button>Continue</button>
+                            </div>
+                        </form>
+                        <div class="rightbarbuttons" id="existibglogin">
+                            <div class="loginrequestOTPbutton">
+                                <button> Existing User ? Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------Items----------------- -->
+
+    <div class="buyingitemsoutside">
+        <div class="buyingitemsinside">
+            <div class="headitem">
+                Top Offers
+            </div>
+            <div class="itemslistsouter">
+                <div class="itemslistinner">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="popup">
+        <div class="msg">
+            <div class="sucessicon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="successmsg">
+                <p class="strong"> <strong> Successful!</strong></p>
+                <p class="messege">Item Added to the Cart</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popupalready">
+        <div class="msgalredy">
+            <div class="warnicon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="successmsg">
+                <p class="strong"> <strong> Oops!</strong></p>
+                <p class="messege">Item Alredy Added to the Cart</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footerpart">
+            <div class="upperfooter">
+                <div class="leftsidebar">
+                    <div class="about">
+                        <h3>ABOUT</h3>
+                        <ul>
+                            <li>contact us</li>
+                            <li>About us</li>
+                            <li>Careers</li>
+                            <li>Flipkart Stories</li>
+                            <li>Press</li>
+                            <li>Flipkart Wholesale</li>
+                            <li>Corporate Information</li>
+
+                        </ul>
+                    </div>
+                    <div class="help">
+                        <h3>HELP</h3>
+                        <ul>
+                            <li>Payments</li>
+                            <li>Shipping</li>
+                            <li>Cancellation & Returns</li>
+                            <li>FAQ</li>
+                            <li>Report Infringement</li>
+
+                        </ul>
+                    </div>
+                    <div class="policy">
+                        <h3>POLICY</h3>
+                        <ul>
+                            <li>Return Policy</li>
+                            <li>Terms Of Use</li>
+                            <li>Security</li>
+                            <li>Privacy</li>
+                            <li>Sitemap</li>
+                            <li>EPR Compliance</li>
+
+                        </ul>
+                    </div>
+                    <div class="SOCIAL">
+                        <h3>SOCIAL</h3>
+                        <ul>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="rightsidebar">
+                    <div class="mail-us">
+                        <h1>Mail Us :</h1>
+                        <p>
+                            Flipkart Internet Private Limited,
+                            Buildings Alyssa, Begonia &
+                            Clove Embassy Tech Village,
+                            Outer Ring Road, Devarabeesanahalli Village,
+                            Bengaluru, 560103,
+                            Karnataka, India
+                        </p>
+
+                    </div>
+                    <div class="office">
+                        <h1>Registered Office Address:</h1>
+                        <p>Flipkart Internet Private Limited,
+                            Buildings Alyssa, Begonia &
+                            Clove Embassy Tech Village,
+                            Outer Ring Road, Devarabeesanahalli Village,
+                            Bengaluru, 560103,
+                            Karnataka, India
+                            CIN : U51109KA2012PTC066107
+                            Telephone: <span>1800 202 9898</span> </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lowerfooter">
+                <div class="div1">
+                    <i class="fal fa-shopping-bag"></i>
+                    Sell On Flipkart
+                </div>
+                <div class="div1">
+                    <i class="fas fa-star"></i>
+                    Advertise
+                </div>
+                <div class="div1">
+                    <i class="fas fa-gift-card"></i>
+                    Gift Cards
+                </div>
+                <div class="div1">
+                    <i class="fas fa-question-circle"></i>
+                    Help Center
+                </div>
+                <div class="copyright">
+                    © 2007-2021 Flipkart.com
+                </div>
+                <div class="card-details">
+                    <img src="imgs/payment-method.svg" alt="">
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ---------Copy Right Footer------- -->
+
+    <div class="copyrightfooter">
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/abhirup.basak.58" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="https://twitter.com/explore" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/its_abhirup_541/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://github.com/Abhirup-Basak" target="_blank"><i class="fa fa-github-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/abhirup-basak-242589217/ " target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+        
+        <p>Copyright Content and Website <span>&copy;Abhirup_Basak</span></p>
+    </div>
+
+    <script src="viewall.js"></script>
+</body>
+
+</html>

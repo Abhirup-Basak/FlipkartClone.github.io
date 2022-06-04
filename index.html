@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/logosite.jpeg">
+    <link rel="stylesheet" href="Swiperstyle.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Online Shopping Site</title>
+</head>
+
+<body>
+    <!-- --------NAVBAR-------- -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logo.png"></a>
+        </div>
+        <div class="searchbox">
+            <div class="search">
+                <input type="search" id="search" placeholder="Search for products, brands and more">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="login">
+            <button class="logindesign">Login</button>
+            <div class="login-dropdown-content">
+                <div class="anchertags">
+                    <p>New Cumtomer ?</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <p>My Profile</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <p>Flipkart Plus Zone</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                    <p>Order</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <p>wishlist</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fas fa-award"></i>
+                    <p>Rewards</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fas fa-gift-card"></i>
+                    <p>Gift Cards</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="more">
+            <div class="moretext">
+                <p>More</p>
+            </div>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <div class="more-dropdown-content">
+                <div class="anchertags">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    <p>Notification Preference</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    <p>Sell on Flipkart</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <p>24x7 Customer Care</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <p>Advertise</p>
+                </div>
+                <div class="anchertags">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <p>Download App</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+
+            <div class="morecart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <p><span class="cartnumber"></span><a href="cart.html">Cart</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------LOGIN MODAL--------------- -->
+    <div class="loginmodalcontent" id="loginmodalcontent">
+        <div class="closebutton" id="closebtn">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+        </div>
+
+        <div class="modalcontent">
+            <div class="subdivisionlogin">
+                <div class="loginmodalidcontent" id="loginmodalid">
+
+                    <div class="loginleftbar">
+                        <div class="logincontent" id="logincreate">
+                            <h1>Login</h1>
+                            <p>Get access to your Orders, Wishlist and Recommendations</p>
+                        </div>
+                        <img src="imgs/loginside.JPG">
+                    </div>
+                    <div class="loginrightbar">
+                        <form id="loginform">
+                            <input type="text" placeholder="Enter Email/Mobile Number" id="email">
+                            <span id="errormailmsg" class="activeerror"></span>
+                            <input type="password" placeholder="Enter Password" id="psw">
+                            <span id="errorpswmsg" class="activeerror"></span>
+                            <div class="loginpolicy">
+                                <p>By continuing, you agree to Flipkart's <span>terms of Use</span> and <span>privacy
+                                        Policy</span> .
+                                </p>
+                            </div>
+                            <div class="loginbutton rightbarbuttons" id="loginbtn">
+                                <button>Login</button>
+                            </div>
+                        </form>
+                        <div class="rightbarbuttons">
+                            <div class="loginorbutton">
+                                <button>OR</button>
+                            </div>
+
+                            <div class="loginrequestOTPbutton">
+                                <button>Request OTP</button>
+                            </div>
+                        </div>
+
+                        <div class="creatingnew" id="createaccount">
+                            <div class="creatingnewaccount">
+                                <p>New to Flipkart? Create an account</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!-- ------------LOGIN MODAL (SIGN UP)--------------- -->
+            <div class="subdivisioncreate">
+                <div class="createmodalcontent" id="createmodalid">
+
+                    <div class="logincreateleftbar">
+                        <div class="logincontent" id="logincreate">
+                            <h1>Looks like you're new here!</h1>
+                            <p>Sign up with your mobile number to get started</p>
+                        </div>
+                        <img src="imgs/loginside.JPG" class="right-bar-img">
+                    </div>
+                    <div class="loginrightbar">
+                        <form id="createform">
+                            <input type="phone number" placeholder="Enter Mobile Number" id="number">
+                            <span id="errornumbermsg" class="activeerror"></span>
+                            <div class="loginpolicy">
+                                <p>By continuing, you agree to Flipkart's <span>terms of Use</span> and <span>privacy
+                                        Policy</span> .
+                                </p>
+                            </div>
+                            <div class="loginbutton rightbarbuttons" id="loginbtn">
+                                <button>Continue</button>
+                            </div>
+                        </form>
+                        <div class="rightbarbuttons" id="existibglogin">
+                            <div class="loginrequestOTPbutton">
+                                <button> Existing User ? Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------UPPER BAR------------ -->
+    <div class="upperbar">
+        <div class="bar toppffers">
+            <img src="imgs/topicons/top offers.png" alt="">
+            <p>Top offers</p>
+        </div>
+        <div class="bar grocery">
+            <img src="imgs/topicons/grocery.png" alt="">
+            <p>Grocery</p>
+        </div>
+        <div class="bar mobiles">
+            <img src="imgs/topicons/mobiles.png" alt="">
+            <p>Mobiles</p>
+        </div>
+        <div class="bar fashion">
+            <img src="imgs/topicons/fashion.png" alt="">
+            <div class="barcontent">
+                <p>Fashion</p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="bar electronics">
+            <img src="imgs/topicons/electronics.png" alt="">
+            <div class="barcontent">
+                <p>Electronics</p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="bar home">
+            <img src="imgs/topicons/home.jpg" alt="">
+            <div class="barcontent">
+                <p>Home</p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+
+        </div>
+        <div class="bar application">
+            <img src="imgs/topicons/application.png" alt="">
+
+            <div class="barcontent">
+                <p>Application</p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="bar travel">
+            <img src="imgs/topicons/travel.png" alt="">
+            <p>Travel</p>
+        </div>
+        <div class="bar toys">
+            <img src="imgs/topicons/toys.png" alt="">
+            <div class="barcontent">
+                <p> Beauty Toys & more</p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------- MAIN SLIDE SHOW ----------------->
+
+    <div class="slideshowcontentall">
+        <div class="slideshowcontent">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/sliders/slide4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/sliders/slide3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/sliders/slide2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/sliders/slide1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next swiperbtnleft"><i class="fas fa-chevron-right"></i></div>
+                <div class="swiper-button-prev swiperbtnright"><i class="fas fa-chevron-left"></i></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- -------------BANK OFFER----------- -->
+    <div class="banksoffer">
+        <img src="imgs/discount.jpg" alt="">
+    </div>
+
+    <!-- ---------------Today's Fashion Deals---------- -->
+
+    <div class="productdetails">
+        <div class="productheader">
+            <h1>Today's Fashion Deals</h1>
+            <div class="viewallbtn">
+                <p> <a href="viewall.html">View all</a> </p>
+            </div>
+        </div>
+    <!-- -------------- Side Show ------------------------------ -->
+
+        <div class="productdetailscontent">
+            
+            <div class="product product-one">
+                
+                <div class="picture" >
+                    <a href="viewall.html"><img src="imgs/product1/pro1.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">Metronaut, Provogue & More</p>
+                    <p class="money">60-80% Off</p>
+                    <p>Men's Tshirts, Jeans & More</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro2.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Nike, ASICS & more</p>
+                    <p class="money">Min. 40% Off</p>
+                    <p>Men's Sports Shoes..</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro3.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">Men's Capse</p>
+                    <p class="money">Min 60% Off</p>
+                    <p>Hurry, Don't Miss Out!</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro4.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">Branded Kurtas, Sarees & more</p>
+                    <p class="money">Under ₹499</p>
+                    <p>Libas, W, Saara..</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro5.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">W, Biba, Aurelia ...</p>
+                    <p class="money">60-70% Off</p>
+                    <p>Lowest Prices on Kurtas & Sets!</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro6.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">Best Deals on Sarees!</p>
+                    <p class="money">Min 70% Off</p>
+                    <p>From Saara, Divastri & more</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro7.jpeg" alt=""></a>
+                   
+                </div>
+                <div class="detail">
+                    <p class="title">Levi's, Killer, Spykar, Wrangler</p>
+                    <p class="money">50-80% Off</p>
+                    <p>Branded Jeans & more</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro8.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">Wildcraft, Killer, HRX..</p>
+                    <p class="money">Min 65% Off</p>
+                    <p>Trackpants, Joggers..</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro9.jpeg" alt=""></a>
+                   
+                </div>
+                <div class="detail">
+                    <p class="title">U.S.Polo, ADIDAS, Levi's...</p>
+                    <p class="money">50-80% Off</p>
+                    <p>T-Shirts, Jeans, Jackets...</p>
+                </div>
+            </div>
+            <div class="product product-one">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product1/pro10.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Fort Collins, Flying Machine....</p>
+                    <p class="money">Min. 60% Off</p>
+                    <p>Jackets, Sweatshirts & more</p>
+                </div>
+            </div>
+
+            <div class="swiper-button-next-card" id="rightarrowone">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="swiper-button-prev-card" id="leftarrowone">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+    </div>
+
+    <!---------BANNERS-1 ---------->
+
+    <div class="specialoffers">
+        <div class="img">
+            <img src="imgs/special1/spe1.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special1/spe2.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special1/spe3.jpeg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special1/spe4.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special1/spe5.JPG" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special1/spe6.JPG" alt="">
+        </div>
+    </div>
+
+    <!-- ------------Bestselling Furniture----------- -->
+
+    <div class="productdetails">
+        <div class="productheader">
+            <h1>Bestselling Furniture</h1>
+            <div class="viewallbtn">
+                <p><a href="viewall.html">View All</a></p>
+            </div>
+        </div>
+
+        <div class="productdetailscontent">
+            <div class="product product-two">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product2/pro1.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Office Study Chairs</p>
+                    <p class="money">From ₹1,890</p>
+                    <p>Best For Work from Home</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product2/pro2.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">Wardrobes</p>
+                    <p class="money">From ₹4,999</p>
+                    <p>2, 3, 4 Door...</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product2/pro3.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Sofa Beds</p>
+                    <p class="money">From ₹6,099</p>
+                    <p>Single & Double</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product2/pro4.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Bean Bags</p>
+                    <p class="money">From ₹999</p>
+                    <p>Trendy Collection</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product2/pro5.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Bestselling Beds</p>
+                    <p class="money">Upto 70% Off</p>
+                    <p>King, Queen & more</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product2/pro6.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Side Table</p>
+                    <p class="money">From ₹1,149</p>
+                    <p>Modern & Trendy</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <img src="imgs/product2/pro7.jpeg" alt="">
+                </div>
+                <div class="detail">
+                    <p class="title">Kids Furniture</p>
+                    <p class="money">From ₹279</p>
+                    <p>Bunk Beds, Loft Beds...</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <img src="imgs/product2/pro8.jpeg" alt="">
+                </div>
+                <div class="detail">
+                    <p class="title">Kitchen Cabinets</p>
+                    <p class="money">From ₹4,599</p>
+                    <p>Metal, Plastic, Solidwood…</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <img src="imgs/product2/pro9.jpeg" alt="">
+                </div>
+                <div class="detail">
+                    <p class="title">Bed,Sofa,Wardrobe,Office Chair..</p>
+                    <p class="money">From ₹2.090</p>
+                    <p>Clearance Sale</p>
+                </div>
+            </div>
+            <div class="product product-two">
+                <div class="picture">
+                    <img src="imgs/product2/pro10.jpeg" alt="">
+                </div>
+                <div class="detail">
+                    <p class="title">Coffee Tables</p>
+                    <p class="money">From ₹2,149</p>
+                    <p>Wooden & Glass</p>
+                </div>
+            </div>
+
+            <div class="swiper-button-next-card-All swipernextone" id="rightarrowtwo">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="swiper-button-prev-card-All swiperprevone" id="leftarrowptwo">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------BANNER-2 -------------- -->
+
+    <div class="specialoffers">
+        <div class="img">
+            <img src="imgs/special2/spc1.jpeg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special2/spc2.jpeg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special2/spc3.JPG" alt="">
+        </div>
+    </div>
+
+    <!-- -------------Best of Electronics----------- -->
+
+    <div class="productdetails">
+        <div class="productheader">
+            <h1>Best of Electronics</h1>
+            <div class="viewallbtn">
+                <p><a href="viewall.html">View All</a></p>
+            </div>
+        </div>
+
+        <div class="productdetailscontent">
+            <div class="product product-three">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product3/pro1.jpeg" alt=""></a>
+                    
+                </div>
+                <div class="detail">
+                    <p class="title">JBL Quantum Gaming Headset</p>
+                    <p class="money">JBL Quantum 200</p>
+                    <p>₹2,999 <span>₹5,999</span> </p>
+                </div>
+            </div>
+            <div class="product product-three">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product3/pro2.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">TV Streaming Devices</p>
+                    <p class="money">Upto 50% Off</p>
+                    <p>Google, Airtel & More</p>
+                </div>
+            </div>
+            <div class="product product-three">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product3/pro3.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Top 20 Cameras</p>
+                    <p class="money">From ₹3,699</p>
+                    <p>DSLRs, Action, Digital & more</p>
+                </div>
+            </div>
+            <div class="product product-three">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product3/pro4.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Camera Lens</p>
+                    <p class="money">From ₹5,499</p>
+                    <p>Canon, Nikon, Tamron</p>
+                </div>
+            </div>
+            <div class="product product-three">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product3/pro5.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Best of Hair Dryers</p>
+                    <p class="money">From ₹299</p>
+                    <p>Philips, Nova, Havells & more</p>
+                </div>
+            </div>
+            <div class="product product-three">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product3/pro6.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Sansui Powerbanks</p>
+                    <p class="money">From ₹549</p>
+                    <p>Top Rated</p>
+                </div>
+            </div>
+
+            <div class="swiper-button-next-card-All swipernexttwo" id="rightarrowone">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="swiper-button-prev-card-All swiperprevtwo" id="leftarrowpne">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------BANNER-3------- -->
+
+    <div class="specialoffers">
+        <div class="img">
+            <img src="imgs/special3/spc1.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special3/spc2.jpeg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special3/spc3.jpeg" alt="">
+        </div>
+    </div>
+
+    <!-- ------------Top Fashion Styles---------- -->
+
+    <div class="productdetails">
+        <div class="productheader">
+            <h1>Top Fashion Styles</h1>
+            <div class="viewallbtn">
+                <p><a href="viewall.html">View All</a></p>
+            </div>
+        </div>
+
+        <div class="productdetailscontent">
+            <div class="product product-four">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product4/pro1.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Campus, Asian & more</p>
+                    <p class="money">From ₹299</p>
+                    <p>Shoes, Sandals...</p>
+                </div>
+            </div>
+            <div class="product product-four">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product4/pro2.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Levi's, U.S.P.A, Allen Solly..</p>
+                    <p class="money">Min. 50% Off</p>
+                    <p>Casual Shirts, Trousers</p>
+                </div>
+            </div>
+            <div class="product product-four">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product4/pro3.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Reebok, PUMA & more</p>
+                    <p class="money">Min. 60% Off</p>
+                    <p>Women's Footwear</p>
+                </div>
+            </div>
+            <div class="product product-four">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product4/pro4.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Wildcraft, Killer,Flying Machine</p>
+                    <p class="money">From ₹399</p>
+                    <p>Essentials, Joggers, Shorts</p>
+                </div>
+            </div>
+            <div class="product product-four">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product4/pro5.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Trendy Backpacks!</p>
+                    <p class="money">Under ₹599</p>
+                    <p>Wildcraft</p>
+                </div>
+            </div>
+            <div class="product product-four">
+                <div class="picture">
+                    <a href="viewall.html"><img src="imgs/product4/pro6.jpeg" alt=""></a>
+                </div>
+                <div class="detail">
+                    <p class="title">Fastrack, Sonata, Wrogn...</p>
+                    <p class="money">from ₹499</p>
+                    <p>Grab@Unbelievable Discount</p>
+                </div>
+            </div>
+
+
+            <div class="swiper-button-next-card-All swipernextthree" id="rightarrowone">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="swiper-button-prev-card-All swiperprevthree" id="leftarrowpne">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------BANNERS OFFER--------------- -->
+
+    <div class="cardoffers">
+        <div class="img">
+            <img src="imgs/special4/spc1.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special4/spc2.JPG" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special4/spc3.JPG" alt="">
+        </div>
+        <div class="img">
+            <img src="imgs/special4/spc4.JPG" alt="">
+        </div>
+    </div>
+
+    <!-- -----------SEMI FOOTER---------------- -->
+
+    <div class="semifooter">
+        <h1>Flipkart: The One-stop Shopping Destination</h1>
+        E-commerce is revolutionizing the way we all shop in India.
+        Why do you want to hop from one store to another in search of
+        the latest phone when you can find it on the Internet in a single
+        click? Not only mobiles. Flipkart houses everything you can possibly
+        imagine, from trending electronics like laptops, tablets, smartphones,
+        and mobile accessories to in-vogue fashion staples like shoes, clothing
+        and lifestyle accessories; from modern furniture like sofa sets
+        , dining tables, and wardrobes to appliances that make your life easy like
+        washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen
+        and small appliances; from home furnishings like cushion covers, mattresses
+        and bedsheets to toys and musical instruments, we got them all covered. You
+        name it, and you can stay assured about finding them all here. For those of
+        you with erratic working hours, Flipkart is your best bet. Shop in your PJs,
+        at night or in the wee hours of the morning. This e-commerce never shuts down.
+        <br>
+        <br>
+        What's more, with our year-round shopping festivals and events, our prices are
+        irresistible. We're sure you'll
+        find yourself picking up more than what you had in mind. If you are wondering
+        why you should shop from Flipkart
+        when there are multiple options available to you, well, the below will answer
+        your question.
+        <br>
+        <br>
+        <h1>Flipkart Plus</h1>
+        A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty reward programme for
+        all its regular customers at zero subscription fee. All you need is 500 supercoins to be a part of this service.
+        For every 100 rupees spent on Flipkart order, Plus members earns 4 supercoins &amp; non-plus members earn 2
+        supercoins. Free delivery, early access during sales and shopping festivals, exchange offers and priority
+        customer service are the top benefits to a Flipkart Plus member. In short, earn more when you shop more!
+        <br>
+        What's more, you can even use the Flipkart supercoins for a number of exciting services, like:
+        <br>
+        An annual Zomato Gold membership
+        <br>
+        An annual Hotstar Premium membership
+        <br>
+        6 months Gaana plus subscription
+        <br>
+        Rupees 550 instant discount on flights on ixigo
+        <br>
+        Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms and conditions apply.
+        <br>
+        <br>
+        <h1>No Cost EMI</h1>
+        In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to shop with us
+        under EMI, without shelling out any processing fee. Applicable on select mobiles, laptops, large and small
+        appliances, furniture, electronics and watches, you can now shop without burning a hole in your pocket. If
+        you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take a look ASAP!
+        Terms and conditions apply.
+        <br>
+        <br>
+        <h1>EMI on Debit Cards</h1>
+        Did you know debit card holders account for 79.38 crore in the country, while there are only 3.14 crore credit
+        card holders? After enabling EMI on Credit Cards, in another attempt to make online shopping accessible to
+        everyone, Flipkart introduces EMI on Debit Cards, empowering you to shop confidently with us without having to
+        worry about pauses in monthly cash flow. At present, we have partnered with Axis Bank, HDFC Bank, State Bank of
+        India and ICICI Bank for this facility. More power to all our shoppers! Terms and conditions apply.
+
+    </div>
+
+    <!-- ----------FOOTER----------- -->
+
+    <footer>
+        <div class="footerpart">
+            <div class="upperfooter">
+                <div class="leftsidebar">
+                    <div class="about">
+                        <h3>ABOUT</h3>
+                        <ul>
+                            <li>contact us</li>
+                            <li>About us</li>
+                            <li>Careers</li>
+                            <li>Flipkart Stories</li>
+                            <li>Press</li>
+                            <li>Flipkart Wholesale</li>
+                            <li>Corporate Information</li>
+
+                        </ul>
+                    </div>
+                    <div class="help">
+                        <h3>HELP</h3>
+                        <ul>
+                            <li>Payments</li>
+                            <li>Shipping</li>
+                            <li>Cancellation & Returns</li>
+                            <li>FAQ</li>
+                            <li>Report Infringement</li>
+
+                        </ul>
+                    </div>
+                    <div class="policy">
+                        <h3>POLICY</h3>
+                        <ul>
+                            <li>Return Policy</li>
+                            <li>Terms Of Use</li>
+                            <li>Security</li>
+                            <li>Privacy</li>
+                            <li>Sitemap</li>
+                            <li>EPR Compliance</li>
+
+                        </ul>
+                    </div>
+                    <div class="SOCIAL">
+                        <h3>SOCIAL</h3>
+                        <ul>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="rightsidebar">
+                    <div class="mail-us">
+                        <h1>Mail Us :</h1>
+                        <p>
+                            Flipkart Internet Private Limited,
+                            Buildings Alyssa, Begonia &
+                            Clove Embassy Tech Village,
+                            Outer Ring Road, Devarabeesanahalli Village,
+                            Bengaluru, 560103,
+                            Karnataka, India
+                        </p>
+                    </div>
+                    <div class="office">
+                        <h1>Registered Office Address:</h1>
+                        <p>Flipkart Internet Private Limited,
+                            Buildings Alyssa, Begonia &
+                            Clove Embassy Tech Village,
+                            Outer Ring Road, Devarabeesanahalli Village,
+                            Bengaluru, 560103,
+                            Karnataka, India
+                            CIN : U51109KA2012PTC066107
+                            Telephone: <span>1800 202 9898</span> </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lowerfooter">
+                <div class="div1">
+                    <i class="fal fa-shopping-bag"></i>
+                    Sell On Flipkart
+                </div>
+                <div class="div1">
+                    <i class="fas fa-star"></i>
+                    Advertise
+                </div>
+                <div class="div1">
+                    <i class="fas fa-gift-card"></i>
+                    Gift Cards
+                </div>
+                <div class="div1">
+                    <i class="fas fa-question-circle"></i>
+                    Help Center
+                </div>
+                <div class="copyright">
+                    © 2007-2021 Flipkart.com
+                </div>
+                <div class="card-details">
+                    <img src="imgs/payment-method.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ---------Copy Right Footer------- -->
+
+    <div class="copyrightfooter">
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/abhirup.basak.58" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="https://twitter.com/explore" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/its_abhirup_541/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://github.com/Abhirup-Basak" target="_blank"><i class="fa fa-github-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/abhirup-basak-242589217/ " target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+        
+        <p>Copyright Content and Website <span>&copy;Abhirup_Basak</span></p>
+    </div>
+
+    <!-- --------SCRIPT FILES--------- -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
